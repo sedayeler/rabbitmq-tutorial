@@ -20,3 +20,4 @@ C:\Users\asus\OneDrive\Masaüstü\repos\RabbitMQ\RabbitMQ.Publisher\obj\Debug\ne
 C:\Users\asus\OneDrive\Masaüstü\repos\RabbitMQ\RabbitMQ.Publisher\obj\Debug\net7.0\RabbitMQ.Publisher.pdb
 C:\Users\asus\OneDrive\Masaüstü\repos\RabbitMQ\RabbitMQ.Publisher\obj\Debug\net7.0\RabbitMQ.Publisher.genruntimeconfig.cache
 C:\Users\asus\OneDrive\Masaüstü\repos\RabbitMQ\RabbitMQ.Publisher\obj\Debug\net7.0\ref\RabbitMQ.Publisher.dll
+C:\Users\asus\OneDrive\Masaüstü\repos\RabbitMQ\RabbitMQ.Publisher\obj\Debug\net7.0\RabbitMQ.Publisher.sourcelink.json

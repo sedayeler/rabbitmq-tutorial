@@ -12,13 +12,13 @@ using IChannel channel = await connection.CreateChannelAsync();
 //Queue oluşturma
 await channel.QueueDeclareAsync(queue: "example", durable: true, exclusive: false);
 
-//Queue'ya mesaj gönderme
-//RabbitMQ kuyruktaki mesajları byte türünden kabul etmektedir. 
-byte[] message = Encoding.UTF8.GetBytes("Merhaba");
-await channel.BasicPublishAsync(exchange: "", routingKey: "example", body: message);
-
 IBasicProperties properties = new BasicProperties();
 properties.Persistent = true;
+
+//Queue'ya mesaj gönderme
+//RabbitMQ kuyruktaki mesajları byte türünde kabul etmektedir. 
+byte[] message = Encoding.UTF8.GetBytes("Merhaba");
+await channel.BasicPublishAsync(exchange: "", routingKey: "example", body: message);
 
 Console.Read();
 
