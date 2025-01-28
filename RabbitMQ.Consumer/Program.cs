@@ -13,6 +13,7 @@ await channel.QueueDeclareAsync(queue: "example", durable: true, exclusive: fals
 AsyncEventingBasicConsumer consumer = new(channel);
 var consumerTag = await channel.BasicConsumeAsync(queue: "example", autoAck: false, consumer: consumer);
 await channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false); //Consumer yük dağılımı
+
 consumer.ReceivedAsync += async (sender, e) =>
 {
     //Queue'ya gelen mesajın işlendiği yerdir.

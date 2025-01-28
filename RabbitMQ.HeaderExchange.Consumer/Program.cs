@@ -8,12 +8,21 @@ factory.Uri = new("amqps://uilltroy:fF8_cjK6zL2ia3G5S3NIUQurkhQsx7yj@jackal.rmq.
 using IConnection connection = await factory.CreateConnectionAsync();
 using IChannel channel = await connection.CreateChannelAsync();
 
-await channel.ExchangeDeclareAsync(exchange: "direct-exchange-example", type: ExchangeType.Direct);
+await channel.ExchangeDeclareAsync(exchange: "header-exchange-example", type: ExchangeType.Headers);
+
+Console.Write("Lütfen header value giriniz: ");
+string value = Console.ReadLine();
 
 var queue = await channel.QueueDeclareAsync();
 string queueName = queue.QueueName;
 
-await channel.QueueBindAsync(queue: queueName, exchange: "direct-exchange-example", routingKey: "example");
+await channel.QueueBindAsync(queue: queueName,
+    exchange: "header-exchange-example",
+    routingKey: string.Empty,
+    new Dictionary<string, object?>
+    {
+        ["no"] = value
+    });
 
 AsyncEventingBasicConsumer consumer = new(channel);
 await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
@@ -27,3 +36,4 @@ consumer.ReceivedAsync += async (sender, e) =>
 };
 
 Console.Read();
+
