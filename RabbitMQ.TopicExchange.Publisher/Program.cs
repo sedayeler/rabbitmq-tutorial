@@ -13,6 +13,7 @@ for (int i = 0; i < 50; i++)
 {
     await Task.Delay(200);
     byte[] message = Encoding.UTF8.GetBytes($"Merhaba {i}");
+
     Console.Write("Topic giriniz: ");
     string topic = Console.ReadLine();
 

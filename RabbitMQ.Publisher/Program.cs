@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using System.Text;
 
-//Bağlantı Oluşturma
+//Bağlantı oluşturma
 ConnectionFactory factory = new ConnectionFactory();
 factory.Uri = new("amqps://uilltroy:fF8_cjK6zL2ia3G5S3NIUQurkhQsx7yj@jackal.rmq.cloudamqp.com/uilltroy");
 

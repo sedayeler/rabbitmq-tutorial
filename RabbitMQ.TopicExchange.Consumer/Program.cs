@@ -25,6 +25,7 @@ consumer.ReceivedAsync += async (sender, e) =>
 {
     string message = Encoding.UTF8.GetString(e.Body.Span);
     Console.WriteLine(message);
+
     await channel.BasicAckAsync(deliveryTag: e.DeliveryTag, multiple: false);
 };
 

@@ -13,7 +13,8 @@ for (int i = 0; i < 50; i++)
 {
     await Task.Delay(200);
     byte[] message = Encoding.UTF8.GetBytes($"Merhaba {i}");
-    Console.WriteLine("Lütfen header value giriniz: ");
+
+    Console.Write("Lütfen header value giriniz: ");
     string value = Console.ReadLine();
 
     var properties = new BasicProperties();
@@ -22,7 +23,8 @@ for (int i = 0; i < 50; i++)
         ["no"] = value
     };
 
-    await channel.BasicPublishAsync(exchange: "header-exchange-example", routingKey: string.Empty, mandatory: false, basicProperties: properties, body: message);
+    await channel.BasicPublishAsync(exchange: "header-exchange-example", routingKey: string.Empty, mandatory: true, basicProperties: properties, body: message); 
+    //mandatory: Mesaj yönlendirilmezse publisher'a geri bildirilir.
 }
 
 Console.Read();
