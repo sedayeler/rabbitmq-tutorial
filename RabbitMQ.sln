@@ -24,9 +24,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.TopicExchange.Publ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.TopicExchange.Consumer", "RabbitMQ.TopicExchange.Consumer\RabbitMQ.TopicExchange.Consumer.csproj", "{EC178EA5-65F2-4CC8-B807-6AF8EF5CECF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.HeaderExchange.Publisher", "RabbitMQ.HeaderExchange.Publisher\RabbitMQ.HeaderExchange.Publisher.csproj", "{273385C3-CE73-4C28-822B-38AE96E4B8FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.HeadersExchange.Publisher", "RabbitMQ.HeaderExchange.Publisher\RabbitMQ.HeadersExchange.Publisher.csproj", "{273385C3-CE73-4C28-822B-38AE96E4B8FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.HeaderExchange.Consumer", "RabbitMQ.HeaderExchange.Consumer\RabbitMQ.HeaderExchange.Consumer.csproj", "{19873D4E-A204-47FF-B7AE-7E361CC07114}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.HeadersExchange.Consumer", "RabbitMQ.HeaderExchange.Consumer\RabbitMQ.HeadersExchange.Consumer.csproj", "{19873D4E-A204-47FF-B7AE-7E361CC07114}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageTemplates.Publisher", "RabbitMQ.MessageTemplates.Publisher\RabbitMQ.MessageTemplates.Publisher.csproj", "{D4D943CA-BF31-4316-A627-403F1940E584}"
 EndProject

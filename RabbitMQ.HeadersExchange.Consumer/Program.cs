@@ -1,5 +1,5 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
+﻿using RabbitMQ.Client.Events;
+using RabbitMQ.Client;
 using System.Text;
 
 ConnectionFactory factory = new ConnectionFactory();
@@ -36,4 +36,3 @@ consumer.ReceivedAsync += async (sender, e) =>
 };
 
 Console.Read();
-
