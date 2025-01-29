@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RabbitMQ.ESB.MassTransit.Consumer.Consumers
+namespace RabbitMQ.ESB.MassTransit.WorkerService.Consumer.Consumers
 {
     public class ExampleMessageConsumer : IConsumer<IMessage>
     {

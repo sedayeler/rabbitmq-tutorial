@@ -21,7 +21,7 @@ await channel.QueueBindAsync(queue: queueName,
     routingKey: string.Empty,
     new Dictionary<string, object?>
     {
-        ["no"] = value
+        ["key"] = value
     });
 
 AsyncEventingBasicConsumer consumer = new(channel);

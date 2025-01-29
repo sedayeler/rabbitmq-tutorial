@@ -19,3 +19,5 @@ for (int i = 0; i < 50; i++)
 
     await channel.BasicPublishAsync(exchange: "topic-exchange-example", routingKey: topic, body: message);
 }
+
+Console.Read();

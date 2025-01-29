@@ -3,11 +3,11 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "RabbitMQ.ESB.MassTransit.Consumer\\RabbitMQ.ESB.MassTransit.Consumer.csproj",
+        "Path": "RabbitMQ.ESB.MassTransit.RequestResponsePattern.Publisher\\RabbitMQ.ESB.MassTransit.RequestResponsePattern.Publisher.csproj",
         "Action": "Start"
       },
       {
-        "Path": "RabbitMQ.ESB.MassTransit.Publisher\\RabbitMQ.ESB.MassTransit.Publisher.csproj",
+        "Path": "RabbitMQ.ESB.MassTransit.RequestResponsePattern.Consumer\\RabbitMQ.ESB.MassTransit.RequestResponsePattern.Consumer.csproj",
         "Action": "Start"
       }
     ]

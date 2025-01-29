@@ -17,13 +17,13 @@ for (int i = 0; i < 50; i++)
     Console.Write("Lütfen header value giriniz: ");
     string value = Console.ReadLine();
 
-    var properties = new BasicProperties();
+    BasicProperties properties = new BasicProperties();
     properties.Headers = new Dictionary<string, object?>()
     {
-        ["no"] = value
+        ["key"] = value
     };
 
-    await channel.BasicPublishAsync(exchange: "header-exchange-example", routingKey: string.Empty, mandatory: true, basicProperties: properties, body: message); 
+    await channel.BasicPublishAsync(exchange: "header-exchange-example", routingKey: string.Empty, mandatory: true, basicProperties: properties, body: message);
     //mandatory: Mesaj yönlendirilmezse publisher'a geri bildirilir.
 }
 

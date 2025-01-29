@@ -1,9 +1,9 @@
 ﻿using MassTransit;
-using RabbitMQ.ESB.MassTransit.Consumer.Consumers;
+using RabbitMQ.ESB.MassTransit.RequestResponsePattern.Consumer.Consumers;
 
 string rabbitMQUrl = "amqps://uilltroy:fF8_cjK6zL2ia3G5S3NIUQurkhQsx7yj@jackal.rmq.cloudamqp.com/uilltroy";
 
-string queueName = "queue-example";
+string queueName = "request-queue";
 
 IBusControl bus = Bus.Factory.CreateUsingRabbitMq(factory =>
 {
@@ -11,7 +11,7 @@ IBusControl bus = Bus.Factory.CreateUsingRabbitMq(factory =>
 
     factory.ReceiveEndpoint(queueName, endpoint =>
     {
-        endpoint.Consumer<ExampleMessageConsumer>();
+        endpoint.Consumer<RequestMessageConsumer>();
     });
 });
 

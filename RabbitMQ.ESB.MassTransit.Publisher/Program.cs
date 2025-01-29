@@ -10,7 +10,7 @@ IBusControl bus = Bus.Factory.CreateUsingRabbitMq(factory =>
     factory.Host(rabbitMQUrl);
 });
 
-ISendEndpoint sendEndpoint = await bus.GetSendEndpoint(new($"{rabbitMQUrl}/{queueName}"));
+ISendEndpoint sendEndpoint = await bus.GetSendEndpoint(new Uri($"{rabbitMQUrl}/{queueName}"));
 
 Console.Write("Gönderilecek mesaj: ");
 string message = Console.ReadLine();

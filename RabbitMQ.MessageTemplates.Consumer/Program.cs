@@ -9,7 +9,7 @@ using IConnection connection = await factory.CreateConnectionAsync();
 using IChannel channel = await connection.CreateChannelAsync();
 
 #region P2P (Point-to-Point) Tasarımı
-//await channel.QueueDeclareAsync(queue: "example", durable: false, exclusive: false);
+//await channel.QueueDeclareAsync(queue: "example", exclusive: false);
 
 //AsyncEventingBasicConsumer consumer = new(channel);
 //await channel.BasicConsumeAsync(queue: "example", autoAck: false, consumer: consumer);
@@ -29,7 +29,7 @@ using IChannel channel = await connection.CreateChannelAsync();
 //var queue = await channel.QueueDeclareAsync();
 //string queueName = queue.QueueName;
 
-//await channel.QueueBindAsync(queueName, exchangeName, routingKey: string.Empty);
+//await channel.QueueBindAsync(queueName, exchangeName, string.Empty);
 
 //AsyncEventingBasicConsumer consumer = new(channel);
 //await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
@@ -44,7 +44,7 @@ using IChannel channel = await connection.CreateChannelAsync();
 
 #region Work Queue(İş Kuyruğu) Tasarımı​
 //string queueName = "work-queue-example";
-//await channel.QueueDeclareAsync(queue: queueName, durable: false, exclusive: false);
+//await channel.QueueDeclareAsync(queue: queueName, exclusive: false);
 
 //AsyncEventingBasicConsumer consumer = new(channel);
 //await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
