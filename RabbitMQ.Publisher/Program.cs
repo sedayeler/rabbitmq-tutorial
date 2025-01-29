@@ -10,7 +10,7 @@ using IConnection connection = await factory.CreateConnectionAsync();
 using IChannel channel = await connection.CreateChannelAsync();
 
 //Queue oluşturma
-await channel.QueueDeclareAsync(queue: "example", durable: true, exclusive: false);
+await channel.QueueDeclareAsync(queue: "example", exclusive: false);
 
 //Queue'ya mesaj gönderme
 //RabbitMQ kuyruktaki mesajları byte türünde kabul etmektedir. 

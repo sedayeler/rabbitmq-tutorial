@@ -32,6 +32,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageTemplates.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.MessageTemplates.Consumer", "RabbitMQ.MessageTemplates.Consumer\RabbitMQ.MessageTemplates.Consumer.csproj", "{C3B65CEF-B9F9-4D68-B839-B34685311A44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ESB.MassTransit.Consumer", "RabbitMQ.ESB.MassTransit.Consumer\RabbitMQ.ESB.MassTransit.Consumer.csproj", "{5C4828F1-4691-48BE-9072-3F037B4FA2B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ESB.MassTransit.Publisher", "RabbitMQ.ESB.MassTransit.Publisher\RabbitMQ.ESB.MassTransit.Publisher.csproj", "{DF62BC5E-3635-4C39-AD0A-B764A25ECD95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ESB.MassTransit.Shared", "RabbitMQ.ESB.MassTransit.Shared\RabbitMQ.ESB.MassTransit.Shared.csproj", "{5DB8087C-5FBA-4033-B94C-D6FA56BC3C56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,6 +92,18 @@ Global
 		{C3B65CEF-B9F9-4D68-B839-B34685311A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3B65CEF-B9F9-4D68-B839-B34685311A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3B65CEF-B9F9-4D68-B839-B34685311A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C4828F1-4691-48BE-9072-3F037B4FA2B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C4828F1-4691-48BE-9072-3F037B4FA2B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C4828F1-4691-48BE-9072-3F037B4FA2B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C4828F1-4691-48BE-9072-3F037B4FA2B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF62BC5E-3635-4C39-AD0A-B764A25ECD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF62BC5E-3635-4C39-AD0A-B764A25ECD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF62BC5E-3635-4C39-AD0A-B764A25ECD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF62BC5E-3635-4C39-AD0A-B764A25ECD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DB8087C-5FBA-4033-B94C-D6FA56BC3C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DB8087C-5FBA-4033-B94C-D6FA56BC3C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DB8087C-5FBA-4033-B94C-D6FA56BC3C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DB8087C-5FBA-4033-B94C-D6FA56BC3C56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

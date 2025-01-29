@@ -8,7 +8,7 @@ factory.Uri = new("amqps://uilltroy:fF8_cjK6zL2ia3G5S3NIUQurkhQsx7yj@jackal.rmq.
 using IConnection connection = await factory.CreateConnectionAsync();
 using IChannel channel = await connection.CreateChannelAsync();
 
-await channel.QueueDeclareAsync(queue: "example", durable: true, exclusive: false);
+await channel.QueueDeclareAsync(queue: "example", exclusive: false);
 
 AsyncEventingBasicConsumer consumer = new(channel);
 var consumerTag = await channel.BasicConsumeAsync(queue: "example", autoAck: false, consumer: consumer);

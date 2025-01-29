@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "RabbitMQ.ESB.MassTransit.Consumer\\RabbitMQ.ESB.MassTransit.Consumer.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "RabbitMQ.ESB.MassTransit.Publisher\\RabbitMQ.ESB.MassTransit.Publisher.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

@@ -50,13 +50,13 @@ await channel.QueueDeclareAsync(replyQueueName, false, false, false);
 
 string correlationId = Guid.NewGuid().ToString();
 
-var properties = new BasicProperties();
+BasicProperties properties = new BasicProperties();
 properties.CorrelationId = correlationId;
 properties.ReplyTo = replyQueueName;
 
 for (int i = 0; i < 10; i++)
 {
-    byte[] message = Encoding.UTF8.GetBytes("Merhaba" + i);
+    byte[] message = Encoding.UTF8.GetBytes("Merhaba " + i);
 
     await channel.BasicPublishAsync(string.Empty, requestQueueName, false, properties, message);
 }

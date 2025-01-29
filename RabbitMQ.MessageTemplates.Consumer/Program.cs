@@ -73,7 +73,7 @@ consumer.ReceivedAsync += async (sender, e) =>
 
     await channel.BasicAckAsync(e.DeliveryTag, false);
 
-    byte[] responseMessage = Encoding.UTF8.GetBytes("İşlem tamamlandı: " + message);
+    byte[] responseMessage = Encoding.UTF8.GetBytes("İşlem tamamlandı. " + message);
 
     BasicProperties properties = new BasicProperties();
     properties.CorrelationId = e.BasicProperties.CorrelationId;
