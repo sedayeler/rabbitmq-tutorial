@@ -43,24 +43,43 @@ using IChannel channel = await connection.CreateChannelAsync();
 #endregion
 
 #region Work Queue(İş Kuyruğu) Tasarımı​
-string queueName = "work-queue-example";
-await channel.QueueDeclareAsync(queue: queueName, durable: false, exclusive: false);
+//string queueName = "work-queue-example";
+//await channel.QueueDeclareAsync(queue: queueName, durable: false, exclusive: false);
 
-AsyncEventingBasicConsumer consumer = new(channel);
-await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
+//AsyncEventingBasicConsumer consumer = new(channel);
+//await channel.BasicConsumeAsync(queue: queueName, autoAck: false, consumer: consumer);
 
 //await channel.BasicQosAsync(prefetchSize: 0, prefetchCount: 1, global: false);
 
-consumer.ReceivedAsync += async (sender, e) =>
-{
-    Console.WriteLine(Encoding.UTF8.GetString(e.Body.Span));
+//consumer.ReceivedAsync += async (sender, e) =>
+//{
+//    Console.WriteLine(Encoding.UTF8.GetString(e.Body.Span));
 
-    await channel.BasicAckAsync(deliveryTag: e.DeliveryTag, multiple: false);
-};
+//    await channel.BasicAckAsync(deliveryTag: e.DeliveryTag, multiple: false);
+//};
 #endregion
 
 #region Request/Response Tasarımı​
+string requestQueueName = "request-queue-example";
+await channel.QueueDeclareAsync(requestQueueName, false, false, false);
 
+AsyncEventingBasicConsumer consumer = new(channel);
+await channel.BasicConsumeAsync(requestQueueName, false, consumer);
+
+consumer.ReceivedAsync += async (sender, e) =>
+{
+    string message = Encoding.UTF8.GetString(e.Body.Span);
+    Console.WriteLine(message);
+
+    await channel.BasicAckAsync(e.DeliveryTag, false);
+
+    byte[] responseMessage = Encoding.UTF8.GetBytes("İşlem tamamlandı: " + message);
+
+    BasicProperties properties = new BasicProperties();
+    properties.CorrelationId = e.BasicProperties.CorrelationId;
+
+    await channel.BasicPublishAsync(string.Empty, e.BasicProperties.ReplyTo, false, properties, responseMessage);
+};
 #endregion
 
 Console.Read();
