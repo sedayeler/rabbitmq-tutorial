@@ -16,7 +16,7 @@ RabbitMQ is an open-source message broker that enables reliable and asynchronous
   - Headers Exchange
  
 ## Design Patterns
-- P2P (Point-to-Point)
-- Pub/Sub (Publish-Subscribe)
-- Work Queue
+- P2P (Point-to-Point) Pattern
+- Pub/Sub (Publish-Subscribe) Pattern
+- Work Queue Pattern
 - Request-Response Pattern
